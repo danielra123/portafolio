@@ -7,8 +7,7 @@ export function Hero() {
       aria-label="Presentación"
       className="mx-auto max-w-5xl px-4 pb-16 pt-14 sm:px-6 sm:pt-20"
     >
-      <p className="text-sm font-medium text-accent">{identity.location}</p>
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
+      <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
         {identity.name}
       </h1>
       <p className="mt-2 text-lg text-muted sm:text-xl">{identity.title}</p>

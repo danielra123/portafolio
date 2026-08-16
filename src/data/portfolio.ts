@@ -14,7 +14,6 @@ export type SocialLink = {
 export type Identity = {
   name: string;
   title: string;
-  location: string;
   email: string;
   phone: string;
   linkedin: string;
@@ -59,7 +58,6 @@ export type EducationItem = {
 export const identity: Identity = {
   name: "Daniel Estiven Ramírez Muñoz",
   title: "Ingeniero de Sistemas | Full Stack Developer",
-  location: "Tunja, Boyacá, Colombia",
   email: "danielra1847@gmail.com",
   phone: "+57 324 290 4462",
   linkedin: "https://linkedin.com/in/daniel-ramirez-ab539b35a",
