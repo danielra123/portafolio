@@ -62,7 +62,7 @@ export const identity: Identity = {
   phone: "+57 324 290 4462",
   linkedin: "https://linkedin.com/in/daniel-ramirez-ab539b35a",
   github: "https://github.com/danielra123",
-  languages: "Español nativo, Inglés B1",
+  languages: "Español nativo, Inglés B1 (en mejora continua)",
   availability: "Disponibilidad inmediata, remoto o presencial",
   cvHref: "/CV-Daniel-Ramirez.pdf",
 };
