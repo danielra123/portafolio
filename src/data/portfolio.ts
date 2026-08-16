@@ -202,21 +202,6 @@ export const projects: Project[] = [
       { label: "Repositorio", href: "#" },
     ],
   },
-  {
-    title: "Proyecto de grado — Módulos de sistemas web para el HUSRT",
-    context: "Universidad Santo Tomás, Seccional Tunja — Aprobado",
-    bullets: [
-      "Elaboré el documento SRS (requerimientos funcionales y no funcionales) a partir de entrevistas y observación directa con el tutor empresarial y el equipo de TI.",
-      "Detecté y corregí 4 defectos de lógica mediante un ciclo formal de pruebas funcionales, de integración (Jest/Supertest) y de aceptación con el área de TI.",
-      "Impacto proyectado: tiempo de respuesta a incidencias de 48 h a menos de 12 h, registro formal de solicitudes del 65% al 100%, y 30% menos recurrencia de incidencias mediante base de conocimiento.",
-      "Documenté manuales de usuario diferenciados para 3 perfiles de rol.",
-    ],
-    technologies: ["SRS", "Jest", "Supertest", "Documentación técnica"],
-    links: [
-      // TODO: reemplazar "#" por el enlace real del repositorio cuando esté disponible.
-      { label: "Repositorio", href: "#" },
-    ],
-  },
 ];
 
 export const experience: ExperienceItem[] = [

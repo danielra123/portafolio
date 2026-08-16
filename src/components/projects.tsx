@@ -11,7 +11,7 @@ export function Projects() {
           </h2>
         </Reveal>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.title} delayMs={index * 80} className="h-full">
               <article className="flex h-full flex-col rounded-lg border border-border bg-surface p-6">
