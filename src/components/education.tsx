@@ -30,10 +30,6 @@ export function Education() {
             <div className="rounded-lg border border-border bg-surface p-5">
               <h3 className="text-sm font-semibold text-foreground">Idiomas</h3>
               <p className="mt-3 text-sm text-foreground/90">{identity.languages}</p>
-              <h3 className="mt-4 text-sm font-semibold text-foreground">
-                Disponibilidad
-              </h3>
-              <p className="mt-1 text-sm text-foreground/90">{identity.availability}</p>
             </div>
           </div>
         </Reveal>
