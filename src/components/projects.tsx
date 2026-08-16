@@ -41,18 +41,6 @@ export function Projects() {
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-5 flex flex-wrap gap-4">
-                  {project.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="text-sm font-medium text-accent hover:underline"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
               </article>
             </Reveal>
           ))}

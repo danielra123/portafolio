@@ -28,17 +28,11 @@ export type SkillCategory = {
   skills: string[];
 };
 
-export type ProjectLink = {
-  label: string;
-  href: string;
-};
-
 export type Project = {
   title: string;
   context: string;
   bullets: string[];
   technologies: string[];
-  links: ProjectLink[];
 };
 
 export type ExperienceItem = {
@@ -180,10 +174,6 @@ export const projects: Project[] = [
       "Cypress",
       "Git",
     ],
-    links: [
-      // TODO: reemplazar "#" por el enlace real del repositorio cuando esté disponible.
-      { label: "Repositorio", href: "#" },
-    ],
   },
   {
     title: "Sistema de alertas tempranas de deserción estudiantil",
@@ -195,10 +185,6 @@ export const projects: Project[] = [
       "Desarrollé el frontend con ASP.NET (Razor Pages/MVC) integrado al backend .NET, con persistencia en PostgreSQL y PHP en componentes adicionales.",
     ],
     technologies: [".NET", "ASP.NET (Razor Pages/MVC)", "PostgreSQL", "PHP"],
-    links: [
-      // TODO: reemplazar "#" por el enlace real del repositorio cuando esté disponible.
-      { label: "Repositorio", href: "#" },
-    ],
   },
 ];
 
