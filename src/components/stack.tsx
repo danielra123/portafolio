@@ -1,20 +1,19 @@
 import { skillCategories } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
 
 export function Stack() {
   return (
     <section id="stack" aria-label="Stack técnico" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Stack técnico
-          </h2>
+          <SectionHeading>Stack técnico</SectionHeading>
         </Reveal>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
-            <Reveal key={category.title} delayMs={index * 60}>
-              <div className="h-full rounded-lg border border-border bg-surface p-5">
+            <Reveal key={category.title} delayMs={index * 60} className="h-full">
+              <div className="card-surface h-full rounded-lg border border-border bg-surface p-5">
                 <h3 className="text-sm font-semibold text-foreground">
                   {category.title}
                 </h3>

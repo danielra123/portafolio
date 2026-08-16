@@ -1,23 +1,22 @@
 import { experience } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
 
 export function Experience() {
   return (
     <section id="experiencia" aria-label="Experiencia" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Experiencia
-          </h2>
+          <SectionHeading>Experiencia</SectionHeading>
         </Reveal>
 
-        <ol className="mt-10 space-y-10 border-l border-border pl-6 sm:pl-8">
+        <ol className="mt-10 space-y-10 border-l-2 border-border pl-6 sm:pl-8">
           {experience.map((item, index) => (
             <Reveal key={item.role + item.organization} delayMs={index * 80}>
               <li className="relative">
                 <span
                   aria-hidden="true"
-                  className="absolute -left-[calc(1.5rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-accent sm:-left-[calc(2rem+5px)]"
+                  className="absolute -left-[calc(1.5rem+6px)] top-1.5 h-3 w-3 rounded-full bg-accent ring-4 ring-accent/15 sm:-left-[calc(2rem+6px)]"
                 />
                 <p className="text-xs font-medium uppercase tracking-wide text-muted">
                   {item.period}

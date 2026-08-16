@@ -21,19 +21,19 @@ export function Hero() {
       <div className="mt-8 flex flex-wrap gap-3">
         <a
           href="#proyectos"
-          className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+          className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground shadow-sm shadow-accent/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
         >
           Ver proyectos
         </a>
         <a
           href={identity.cvHref}
-          className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
+          className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-surface"
         >
           Descargar CV
         </a>
         <a
           href="#contacto"
-          className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
+          className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-surface"
         >
           Contáctame
         </a>

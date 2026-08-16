@@ -1,5 +1,6 @@
 import { identity, socialLinks } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
 import type { SocialLink } from "@/data/portfolio";
 
 function SocialIcon({ icon }: { icon: SocialLink["icon"] }) {
@@ -39,9 +40,7 @@ export function Contact() {
     <section id="contacto" aria-label="Contacto" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Contacto
-          </h2>
+          <SectionHeading>Contacto</SectionHeading>
           <p className="mt-4 max-w-2xl text-base text-foreground/90">
             ¿Buscas un desarrollador Full Stack para tu equipo? Escríbeme por
             cualquiera de estos medios.
@@ -57,7 +56,7 @@ export function Contact() {
                     aria-label={link.label}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2.5 text-sm text-foreground transition-colors hover:bg-background"
+                    className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-4 py-2.5 text-sm text-foreground transition-all hover:-translate-y-0.5 hover:border-accent hover:bg-background hover:shadow-md"
                   >
                     <SocialIcon icon={link.icon} />
                     {link.label}

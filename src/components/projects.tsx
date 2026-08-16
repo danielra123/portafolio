@@ -1,20 +1,19 @@
 import { projects } from "@/data/portfolio";
 import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
 
 export function Projects() {
   return (
     <section id="proyectos" aria-label="Proyectos" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
         <Reveal>
-          <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Proyectos
-          </h2>
+          <SectionHeading>Proyectos</SectionHeading>
         </Reveal>
 
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <Reveal key={project.title} delayMs={index * 80} className="h-full">
-              <article className="flex h-full flex-col rounded-lg border border-border bg-surface p-6">
+              <article className="card-surface flex h-full flex-col rounded-lg border border-border bg-surface p-6">
                 <h3 className="text-lg font-semibold text-foreground">
                   {project.title}
                 </h3>
