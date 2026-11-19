@@ -3,9 +3,9 @@ import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Stack } from "@/components/stack";
-import { Projects } from "@/components/projects";
 import { Experience } from "@/components/experience";
 import { Education } from "@/components/education";
+import { DevRunnerGame } from "@/components/dev-runner-game";
 import { Contact } from "@/components/contact";
 
 export default function Home() {
@@ -23,9 +23,9 @@ export default function Home() {
         <Hero />
         <About />
         <Stack />
-        <Projects />
         <Experience />
         <Education />
+        <DevRunnerGame />
         <Contact />
       </main>
       <Footer />
