@@ -724,7 +724,7 @@ export function DevRunnerGame() {
               </div>
 
               {/* Game Viewport / Canvas Container */}
-              <div className="relative aspect-[16/8] w-full bg-[#070b14] overflow-hidden">
+              <div className="relative h-[290px] sm:h-[380px] md:h-[420px] w-full bg-[#070b14] overflow-hidden flex items-center justify-center">
                 <canvas
                   ref={canvasRef}
                   width={900}
@@ -734,29 +734,33 @@ export function DevRunnerGame() {
 
                 {/* Overlay: Start Screen */}
                 {gameState === "start" && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 p-4 text-center backdrop-blur-sm">
-                    <div className="max-w-md">
-                      <span className="inline-block rounded-full bg-accent/20 border border-accent/40 px-3 py-1 text-xs font-semibold text-accent mb-2">
-                        🎮 Mini-juego Arcade Tecnológico
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/85 p-3 sm:p-6 text-center backdrop-blur-sm z-20">
+                    <div className="max-w-md w-full flex flex-col items-center gap-2 sm:gap-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/20 border border-accent/40 px-3 py-0.5 text-[11px] font-semibold text-accent">
+                        <span>🎮</span> Modo Arcade
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white">
+                      <h3 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
                         Dev Runner: Full Stack Quest
                       </h3>
-                      <p className="mt-2 text-xs sm:text-sm text-slate-300">
-                        Controla al ingeniero en vestido de paño con su maletín. Salta sobre plataformas, recolecta tecnologías y aplasta los errores para desplegar en producción.
+                      <p className="text-xs sm:text-sm text-slate-300 max-w-xs sm:max-w-sm">
+                        Ayuda al ingeniero en vestido de paño a superar los 4 niveles del ciclo de software hasta producción.
                       </p>
 
-                      <div className="mt-4 flex flex-wrap justify-center gap-2 text-xs text-slate-400">
-                        <span className="rounded bg-slate-800 px-2 py-1">⌨️ Flechas / WASD para mover</span>
-                        <span className="rounded bg-slate-800 px-2 py-1">Espacio para saltar</span>
+                      <div className="hidden sm:flex items-center justify-center gap-2 text-xs text-slate-400">
+                        <span className="rounded bg-slate-800/90 border border-slate-700 px-2 py-0.5">⌨️ Flechas / WASD para mover</span>
+                        <span className="rounded bg-slate-800/90 border border-slate-700 px-2 py-0.5">Espacio para saltar</span>
+                      </div>
+
+                      <div className="sm:hidden text-[11px] text-accent/90">
+                        📱 Controles táctiles listos en la barra inferior
                       </div>
 
                       <button
                         type="button"
                         onClick={startGame}
-                        className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-accent px-8 text-sm font-bold text-accent-foreground shadow-lg shadow-accent/40 hover:scale-105 active:scale-95 transition-all"
+                        className="mt-1 sm:mt-2 inline-flex h-11 sm:h-12 items-center justify-center gap-2 rounded-xl bg-accent px-7 sm:px-8 text-xs sm:text-sm font-bold text-accent-foreground shadow-lg shadow-accent/40 hover:scale-105 active:scale-95 transition-all"
                       >
-                        Iniciar Juego (Nivel 1)
+                        ¡Iniciar Nivel 1!
                       </button>
                     </div>
                   </div>
@@ -764,18 +768,18 @@ export function DevRunnerGame() {
 
                 {/* Overlay: Game Over */}
                 {gameState === "game_over" && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/85 p-4 text-center backdrop-blur-sm">
-                    <span className="text-3xl">💥</span>
-                    <h3 className="mt-2 text-xl font-bold text-rose-500">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-4 text-center backdrop-blur-sm z-20">
+                    <span className="text-2xl sm:text-3xl">💥</span>
+                    <h3 className="mt-1.5 text-lg sm:text-xl font-bold text-rose-500">
                       ¡Error en Ejecución!
                     </h3>
                     <p className="mt-1 text-xs sm:text-sm text-slate-300">
-                      Un bug interrumpió el proceso. Inténtalo de nuevo para resolverlo.
+                      Un bug interrumpió el proceso. Inténtalo de nuevo.
                     </p>
                     <button
                       type="button"
                       onClick={restartCurrentLevel}
-                      className="mt-4 inline-flex h-11 items-center justify-center rounded-xl bg-rose-600 px-6 text-sm font-semibold text-white shadow-lg shadow-rose-600/30 hover:opacity-90 active:scale-95 transition-all"
+                      className="mt-3 inline-flex h-10 sm:h-11 items-center justify-center rounded-xl bg-rose-600 px-5 sm:px-6 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-rose-600/30 active:scale-95 transition-all"
                     >
                       Reintentar Nivel
                     </button>
@@ -784,18 +788,18 @@ export function DevRunnerGame() {
 
                 {/* Overlay: Level Complete */}
                 {gameState === "level_complete" && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/85 p-4 text-center backdrop-blur-sm">
-                    <span className="text-3xl">✨</span>
-                    <h3 className="mt-2 text-xl font-bold text-emerald-400">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-4 text-center backdrop-blur-sm z-20">
+                    <span className="text-2xl sm:text-3xl">✨</span>
+                    <h3 className="mt-1.5 text-lg sm:text-xl font-bold text-emerald-400">
                       ¡Nivel {currentLevelIdx + 1} Completado!
                     </h3>
-                    <p className="mt-1 text-xs sm:text-sm text-slate-300">
+                    <p className="mt-1 text-xs sm:text-sm text-slate-300 max-w-xs">
                       {LEVEL_CONFIGS[currentLevelIdx].desc}
                     </p>
                     <button
                       type="button"
                       onClick={nextLevel}
-                      className="mt-4 inline-flex h-11 items-center justify-center rounded-xl bg-emerald-600 px-6 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 hover:opacity-90 active:scale-95 transition-all"
+                      className="mt-3 inline-flex h-10 sm:h-11 items-center justify-center rounded-xl bg-emerald-600 px-5 sm:px-6 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 active:scale-95 transition-all"
                     >
                       Siguiente Nivel &rarr;
                     </button>
@@ -804,26 +808,26 @@ export function DevRunnerGame() {
 
                 {/* Overlay: Victory */}
                 {gameState === "victory" && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-4 text-center backdrop-blur-md">
-                    <span className="text-4xl">🚀🏆</span>
-                    <h3 className="mt-2 text-2xl font-bold text-gradient">
-                      ¡Despliegue a Producción Exitoso!
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 p-4 text-center backdrop-blur-md z-20">
+                    <span className="text-3xl sm:text-4xl">🚀🏆</span>
+                    <h3 className="mt-1.5 text-xl sm:text-2xl font-bold text-gradient">
+                      ¡Despliegue Exitoso!
                     </h3>
-                    <p className="mt-2 max-w-md text-xs sm:text-sm text-slate-200">
-                      Has completado los 4 niveles del ciclo de software: Frontend, Backend, Bases de Datos y Producción en AWS. ¡Puntaje final: <strong>{score} puntos</strong>!
+                    <p className="mt-1 text-xs sm:text-sm text-slate-200 max-w-sm">
+                      Completaste los 4 niveles: Frontend, Backend, DB y AWS. Puntaje: <strong className="text-accent">{score} pts</strong>
                     </p>
-                    <div className="mt-6 flex flex-wrap gap-3">
+                    <div className="mt-4 flex flex-wrap justify-center gap-2.5">
                       <button
                         type="button"
                         onClick={startGame}
-                        className="inline-flex h-11 items-center justify-center rounded-xl border border-border bg-slate-800 px-5 text-sm font-semibold text-white hover:bg-slate-700 active:scale-95 transition-all"
+                        className="inline-flex h-10 sm:h-11 items-center justify-center rounded-xl border border-border bg-slate-800 px-4 text-xs sm:text-sm font-semibold text-white active:scale-95 transition-all"
                       >
                         Jugar de nuevo
                       </button>
                       <a
                         href="#contacto"
                         onClick={() => setIsExpanded(false)}
-                        className="inline-flex h-11 items-center justify-center rounded-xl bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 hover:opacity-90 active:scale-95 transition-all"
+                        className="inline-flex h-10 sm:h-11 items-center justify-center rounded-xl bg-accent px-4 text-xs sm:text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/30 active:scale-95 transition-all"
                       >
                         Contratar a Daniel
                       </a>
@@ -833,12 +837,12 @@ export function DevRunnerGame() {
               </div>
 
               {/* Mobile / Touch Controls Overlay (Especial para Android e iOS) */}
-              <div className="border-t border-border/80 bg-surface/90 p-4">
+              <div className="border-t border-border/80 bg-surface/95 p-3 sm:p-4">
                 <div className="flex items-center justify-between sm:hidden">
-                  <div className="flex gap-2">
+                  <div className="flex gap-2.5">
                     <button
                       type="button"
-                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-800 border border-slate-700 text-xl font-bold text-white active:bg-accent active:text-white select-none touch-none"
+                      className="flex h-12 w-14 items-center justify-center rounded-xl bg-slate-800 border border-slate-700 text-lg font-bold text-white active:bg-accent active:text-white select-none touch-manipulation"
                       onTouchStart={(e) => {
                         e.preventDefault();
                         keysRef.current.left = true;
@@ -849,13 +853,13 @@ export function DevRunnerGame() {
                       }}
                       onMouseDown={() => (keysRef.current.left = true)}
                       onMouseUp={() => (keysRef.current.left = false)}
-                      aria-label="Mover a la izquierda"
+                      aria-label="Izquierda"
                     >
                       &larr;
                     </button>
                     <button
                       type="button"
-                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-800 border border-slate-700 text-xl font-bold text-white active:bg-accent active:text-white select-none touch-none"
+                      className="flex h-12 w-14 items-center justify-center rounded-xl bg-slate-800 border border-slate-700 text-lg font-bold text-white active:bg-accent active:text-white select-none touch-manipulation"
                       onTouchStart={(e) => {
                         e.preventDefault();
                         keysRef.current.right = true;
@@ -866,7 +870,7 @@ export function DevRunnerGame() {
                       }}
                       onMouseDown={() => (keysRef.current.right = true)}
                       onMouseUp={() => (keysRef.current.right = false)}
-                      aria-label="Mover a la derecha"
+                      aria-label="Derecha"
                     >
                       &rarr;
                     </button>
@@ -874,7 +878,7 @@ export function DevRunnerGame() {
 
                   <button
                     type="button"
-                    className="flex h-14 w-28 items-center justify-center rounded-2xl bg-accent text-sm font-bold text-accent-foreground shadow-lg shadow-accent/30 active:scale-95 select-none touch-none"
+                    className="flex h-12 w-32 items-center justify-center rounded-xl bg-accent text-xs font-bold uppercase tracking-wider text-accent-foreground shadow-md shadow-accent/30 active:scale-95 select-none touch-manipulation"
                     onTouchStart={(e) => {
                       e.preventDefault();
                       keysRef.current.jump = true;
@@ -896,7 +900,7 @@ export function DevRunnerGame() {
                     <span>💡 Usa las flechas <kbd className="rounded border border-border px-1.5 py-0.5">&larr;</kbd> <kbd className="rounded border border-border px-1.5 py-0.5">&rarr;</kbd> para correr</span>
                     <span><kbd className="rounded border border-border px-1.5 py-0.5">Espacio</kbd> o <kbd className="rounded border border-border px-1.5 py-0.5">&uarr;</kbd> para saltar</span>
                   </div>
-                  <span>Puedes aplastar los errores saltando encima de ellos.</span>
+                  <span>Aplasta los bugs cayéndoles encima.</span>
                 </div>
               </div>
             </div>
