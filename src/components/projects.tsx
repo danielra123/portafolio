@@ -41,14 +41,14 @@ export function Projects() {
                   ))}
                 </ul>
 
-                {project.repository && (
+                {(project.liveUrl || project.repository) && (
                   <a
-                    href={project.repository}
+                    href={project.liveUrl || project.repository}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-foreground"
                   >
-                    Ver código fuente
+                    {project.liveUrl ? "Ver proyecto" : "Ver código fuente"}
                     <svg
                       className="h-4 w-4"
                       fill="none"
