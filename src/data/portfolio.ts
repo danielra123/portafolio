@@ -56,7 +56,7 @@ export const identity: Identity = {
   title: "Ingeniero de Sistemas",
   email: "danielra1847@gmail.com",
   phone: "+57 324 290 4462",
-  linkedin: "https://linkedin.com/in/daniel-ramirez-ab539b35",
+  linkedin: "https://www.linkedin.com/in/daniel-ramirez-ab539b35a",
   github: "https://github.com/danielra123",
   languages: "Español nativo, Inglés B1",
   availability: "Bogotá, Colombia · Disponibilidad inmediata para trabajo remoto y presencial",
