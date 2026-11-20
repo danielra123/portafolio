@@ -683,7 +683,7 @@ export function DevRunnerGame() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
             <SectionHeading
               eyebrow="Modo Arcade Interactivo"
-              description="Acompaña a Daniel en vestido de paño a superar los 4 niveles del ciclo de desarrollo Full Stack."
+              description="Acompaña a Daniel en un recorrido por las cuatro etapas del desarrollo Full Stack: análisis, diseño, desarrollo y despliegue."
             >
               Dev Runner: La Ruta del Desarrollador
             </SectionHeading>
@@ -743,7 +743,7 @@ export function DevRunnerGame() {
                         Dev Runner: Full Stack Quest
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-300 max-w-xs sm:max-w-sm">
-                        Ayuda al ingeniero en vestido de paño a superar los 4 niveles del ciclo de software hasta producción.
+                        Ayuda a Daniel a completar los cuatro niveles del ciclo de desarrollo de software y alcanzar producción.
                       </p>
 
                       <div className="hidden sm:flex items-center justify-center gap-2 text-xs text-slate-400">
