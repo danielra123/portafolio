@@ -154,7 +154,7 @@ export const projects: Project[] = [
   {
     title: "DataInsight Dashboard",
     context: "Aplicación web de análisis y visualización de datos",
-    liveUrl: "https://datainsight-dashboard-git-main-daniel-ramirez2.vercel.app/",
+    liveUrl: "https://datainsight-dashboard.vercel.app/",
     bullets: [
       "Frontend: construí la interfaz de carga y análisis con Angular 19, con visualizaciones de métricas, categorías, series y deducciones sobre los datos.",
       "Backend: desarrollé una API REST con FastAPI y Python para validar archivos CSV, procesarlos con Pandas y entregar resúmenes y datos para las gráficas.",
