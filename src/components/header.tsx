@@ -18,8 +18,20 @@ export function Header() {
             className="group flex items-center gap-2.5 transition-transform active:scale-95"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-blue-600 text-xs font-bold text-accent-foreground shadow-sm shadow-accent/30 transition-transform group-hover:scale-105">
-              DR
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-accent to-blue-600 text-white shadow-sm shadow-accent/30 transition-transform group-hover:scale-105">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 40 40"
+                className="h-7 w-7"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M8 9h5a11 11 0 1 1 0 22H8V9Z" />
+                <path d="M19 31V10h5a5 5 0 0 1 0 10h-5m5 0 7 11" />
+              </svg>
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-tight text-foreground group-hover:text-accent transition-colors">
