@@ -33,6 +33,7 @@ export type Project = {
   context: string;
   bullets: string[];
   technologies: string[];
+  repository?: string;
 };
 
 export type ExperienceItem = {
@@ -148,6 +149,17 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "DataInsight Dashboard",
+    context: "Aplicación web de análisis y visualización de datos",
+    bullets: [
+      "Desarrollé una plataforma que permite cargar archivos CSV, explorar métricas y visualizar distribuciones mediante un dashboard interactivo.",
+      "Implementé una API con FastAPI y procesamiento de datos con Python y Pandas.",
+      "Aislé los datasets por sesión de navegador para permitir que varios usuarios analicen archivos distintos sin mezclar sus datos.",
+    ],
+    technologies: ["Angular", "FastAPI", "Python", "Pandas", "Render", "Vercel"],
+    repository: "https://github.com/danielra123/datainsight-dashboard",
+  },
   {
     title: "HRCATCH 2.0 — Gestión de Repuestos e Indicadores",
     context: "Hospital Universitario San Rafael de Tunja (HUSRT)",
