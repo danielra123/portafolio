@@ -153,7 +153,7 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     title: "DataInsight Dashboard",
-    context: "Aplicación web de análisis y visualización de datos",
+    context: "Convierte archivos CSV en indicadores y visualizaciones para revisar la calidad de los datos, identificar patrones y apoyar decisiones.",
     liveUrl: "https://datainsight-dashboard.vercel.app/",
     bullets: [
       "Frontend: construí la interfaz de carga y análisis con Angular 19, con visualizaciones de métricas, categorías, series y deducciones sobre los datos.",
