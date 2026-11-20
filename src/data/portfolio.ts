@@ -34,6 +34,7 @@ export type Project = {
   bullets: string[];
   technologies: string[];
   repository?: string;
+  liveUrl?: string;
 };
 
 export type ExperienceItem = {
@@ -153,6 +154,7 @@ export const projects: Project[] = [
   {
     title: "DataInsight Dashboard",
     context: "Aplicación web de análisis y visualización de datos",
+    liveUrl: "https://portafolio-aejjl70jd-daniel-ramirez2.vercel.app/",
     bullets: [
       "Desarrollé una plataforma que permite cargar archivos CSV, explorar métricas y visualizar distribuciones mediante un dashboard interactivo.",
       "Implementé una API con FastAPI y procesamiento de datos con Python y Pandas.",
@@ -163,7 +165,7 @@ export const projects: Project[] = [
   },
   {
     title: "HRCATCH 2.0 — Gestión de Repuestos e Indicadores",
-    context: "Hospital Universitario San Rafael de Tunja (HUSRT)",
+    context: "Pasantía profesional · Hospital Universitario San Rafael de Tunja (HUSRT)",
     bullets: [
       "Diseñé y desarrollé el módulo de Gestión de Repuestos: 4 tablas relacionales en MariaDB, CRUD, control de stock con alertas automáticas por umbral mínimo, auditoría inmutable de cambios y exportación PDF/CSV.",
       "Desarrollé el módulo de Indicadores de Sistemas: 10+ gráficas interactivas en tiempo real con Chart.js y PrimeNG.",
@@ -186,7 +188,7 @@ export const projects: Project[] = [
   },
   {
     title: "Sistema de alertas tempranas de deserción estudiantil",
-    context: "Bienestar Universitario (UDIES), Universidad Santo Tomás",
+    context: "Práctica profesional · Bienestar Universitario (UDIES), Universidad Santo Tomás",
     bullets: [
       "Continué el desarrollo y reestructuré un sistema de alertas tempranas de deserción estudiantil, reemplazando el seguimiento manual en hojas de Excel.",
       "Implementé la carga y consolidación de información por estudiante (asistencia a UDIES, materias matriculadas, perdidas y canceladas) para identificar patrones de riesgo académico.",
