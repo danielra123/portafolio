@@ -144,3 +144,132 @@ body {
     transition: none;
   }
 }
+
+/* Seasonal details: decorative only, with no impact on page controls. */
+.seasonal-decorations {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.seasonal-corner {
+  position: absolute;
+  top: 4.25rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  opacity: 0.48;
+}
+
+.seasonal-corner-left {
+  left: 0.5rem;
+}
+
+.seasonal-corner-right {
+  right: 0.5rem;
+  transform: scaleX(-1);
+}
+
+.seasonal-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+[data-season="holiday"] .seasonal-line {
+  stroke: #91a88f;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-season="holiday"] .seasonal-leaf {
+  fill: #6e8b73;
+  stroke: #91a88f;
+  stroke-width: 1;
+}
+
+[data-season="holiday"] .seasonal-berry {
+  fill: #9c4f58;
+}
+
+[data-season="holiday"] .seasonal-gold {
+  fill: #c4a76a;
+}
+
+[data-season="halloween"] .seasonal-line {
+  stroke: #ad9bc9;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-season="halloween"] .seasonal-moon {
+  fill: #b2a0d2;
+  stroke: #b2a0d2;
+  stroke-width: 1;
+}
+
+[data-season="halloween"] .seasonal-bat {
+  fill: #82729c;
+}
+
+[data-season="halloween"] .seasonal-pumpkin {
+  stroke: #c97848;
+  stroke-width: 1.5;
+}
+
+[data-season="halloween"] .seasonal-face {
+  stroke: #c97848;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.seasonal-name-accent {
+  width: 0.68em;
+  height: 0.68em;
+  flex: 0 0 auto;
+  margin-left: 0.35em;
+  animation: seasonal-name-arrive 520ms ease-out both;
+}
+
+.seasonal-name-accent-holiday {
+  color: #c4a76a;
+}
+
+.seasonal-name-accent-halloween {
+  color: #c97848;
+}
+
+@keyframes seasonal-name-arrive {
+  0% {
+    opacity: 0;
+    transform: scale(0.55) rotate(-35deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.12) rotate(8deg);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .seasonal-corner {
+    top: 4.1rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    opacity: 0.34;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seasonal-name-accent {
+    animation: none;
+  }
+}
+
