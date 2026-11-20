@@ -73,6 +73,7 @@ export const aboutText: string =
 export const navLinks: NavLink[] = [
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#stack", label: "Stack" },
+  { href: "#proyectos", label: "Proyectos" },
   { href: "#experiencia", label: "Experiencia" },
   { href: "#educacion", label: "Educación" },
   { href: "#juego", label: "Arcade" },
